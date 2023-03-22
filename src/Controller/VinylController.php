@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 use function Symfony\Component\String\u;
 
 class VinylController extends AbstractController
@@ -55,8 +56,8 @@ class VinylController extends AbstractController
             ]
         ];
 
-
-        return $this->render('vinyl/homepage.html.twig', [
+        //using the twig service instead of
+       return $this->render('vinyl/homepage.html.twig', [
             'title' => 'Symfony & 90\'s Jams',
             'tracks' => $tracks
         ]);
